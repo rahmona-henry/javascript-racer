@@ -1,10 +1,10 @@
-table, th, tr  {
+table, th,  {
     border: 3px solid black;
     border-collapse: collapse;
  
 }
 
-th, td  {
+th, td, tr{
   width: 70px;
   height: 70px;
 }
