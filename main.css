@@ -4,7 +4,7 @@ table, th, td {
  
 }
 
-th, td, {
+th, td, tr {
   width: 70px;
   height: 70px;
 }
