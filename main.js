@@ -20,7 +20,7 @@ else if (lenght>15)
 
     for (i = 1; i <= lenght; i++) {
       console.log(i);
-      $("tr").append("td");
+      $("player1","player2").append("<td>");
 };
      
 
