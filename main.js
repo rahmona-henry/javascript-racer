@@ -1,5 +1,6 @@
-//To prevent any JQuery running before the document has finished loading
-$(document).ready(function(){
+
+$( document ).ready(function() {
+    console.log( "ready!" );
 
 
 
