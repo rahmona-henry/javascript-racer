@@ -3,10 +3,10 @@ table tr td {
 
 }​
 
-.player1 th {
+.player1 th tr{
 background: green;
 }
 
-.player2 th {
+.player2 th tr{
   background: orange;
 }
