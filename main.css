@@ -4,9 +4,9 @@ table tr td {
 }​
 
 .player1 th {
-color: green;
+background: green;
 }
 
 .player2 th {
-  color: orange;
+  background: orange;
 }
