@@ -4,8 +4,8 @@ table, th, td {
 }
 
 th {
-  width: 50px;
-  heigth: 50px;
+  width: 100px;
+  height: 100px;
 }
 
 .player1 th {
