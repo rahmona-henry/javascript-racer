@@ -1,7 +1,9 @@
-
+table th td {
+    border: 1px solid black;
+}
 
 .player1 th {
-color: black;
+color: green;
 }
 
 .player2 th {
