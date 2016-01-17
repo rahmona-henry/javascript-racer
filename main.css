@@ -1,10 +1,4 @@
 
 table, td, th {
-    border: 1px solid black;
-}
-
-.racetrack
-{
-  border-collapse: collapse;
-
+    border: solid black 1px;
 }
