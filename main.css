@@ -8,11 +8,11 @@ th {
   height: 70px;
 }
 
-.player1 th {
+#player1 th {
 color: green;
 }
 
-.player2 th {
+#player2 th {
   color: orange;
 }
 
