@@ -2,3 +2,6 @@
 table, td, th {
     border: solid black 1px;
 }
+tr {
+  border-bottom: solid black 1px;
+}
