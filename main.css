@@ -1,12 +1,9 @@
-table tr td {
-    border: 1px solid black;
 
-}​
 
-.player1 th tr{
-background: green;
+.player1 th {
+color: green;
 }
 
-.player2 th tr{
-  background: orange;
+.player2 th {
+  color: orange;
 }
