@@ -18,7 +18,7 @@ else if (lenght>15)
 
 //Create racetrack based on users input
 
-    for (i = 1; i <= length; i++) {
+    for (i = 1; i <= lenght; i++) {
       console.log(i);
       $("tr").append("td");
 };
