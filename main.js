@@ -20,7 +20,7 @@ else if (lenght>15)
 
     for (i = 1; i <= length; i++) {
       console.log(i);
-      $(".racetrack").append("td");
+      $("tr").append("td");
 };
      
 
