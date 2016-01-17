@@ -1,4 +1,4 @@
-tr td {
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
+table tr td {
+    border: 1px solid black;
+
 }​
