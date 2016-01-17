@@ -21,7 +21,7 @@ else if (lenght>15)
     for (i = 1; i <= lenght; i++) {
       console.log(i);
       $("player1","player2").append("<td>");
-};
+     };
      
 
 });
