@@ -1,6 +1,5 @@
 $('document').ready(function() {
-    console.log( "ready!" );
-
+  
 //Users enter race track lenght
 var trackLength = prompt("Hello Racers,please choose your racetrack between: 5 and 15 lenghts " );
 
@@ -35,7 +34,7 @@ else if (trackLength>15)
       else {
         $("#Player2").addClass("orange");
  }      
-
+}
 
 
 });
