@@ -25,17 +25,17 @@ else if (trackLength>15)
 window.addEventListener("keyup", updatePlayerPosition, false);{
   function updatePlayerPosition(e) {
        if(e.keyCode == "81") {
-       $("Player1").addClass("blue");
+       $("#Player1").addClass("blue");
      }
 
       else {
         if(e.keyCode == "80") {
-        $("Player2").addClass("orange");
+        $("#Player2").addClass("orange");
       }
 
 }
  }
 
 
-});
+//});
 
