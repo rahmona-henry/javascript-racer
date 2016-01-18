@@ -28,11 +28,11 @@ $(document).on('keyup',updatePlayerPosition)
   function updatePlayerPosition(e) {
 
        if(e.keyCode == "81") {
-       $("#Player1").addClass("blue");
+       $("<td>").addClass("blue");
      }
 
       else if(e.keyCode == "80") {
-      $("#Player2").addClass("orange");
+      $("<td>").addClass("orange");
     }       
 }
 });
