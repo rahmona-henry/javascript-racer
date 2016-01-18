@@ -9,11 +9,11 @@ th, td, tr {
   height: 70px;
 }
 
-#player1_strip th {
+#player1 th {
 color: green;
 }
 
-#player2_strip th {
+#player2 th {
   color: orange;
 }
 
