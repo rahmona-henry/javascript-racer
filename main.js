@@ -1,8 +1,7 @@
 $('document').ready(function() {
-    console.log( "ready!" );
+//Players enter racetrack length
 
-//Users enter race track lenght
-var trackLength = prompt("Hello Racers,please choose your racetrack between: 5 and 15 lenghts " );
+var trackLength = prompt("Hello Racers,please choose your racetrack length between:5 and 15 lenghts");
 
 //Check if racetrack is between 5 and 15 lenghts if not issue warning
 if(trackLength<5)
@@ -16,21 +15,18 @@ else if (trackLength>15)
 };
 
 //Create racetrack length based on players input
-
     for (var i = 1; i <= trackLength; i++) {
       console.log(i);
       $(".track").append("<td>");
     };
 
 //Add EventListener that listens for users pushing their player keys and makes their cell active
-$(document).on("keyup","<td>",updatePlayerPosition)
+$(document).on("keyup",".track",updatePlayerPosition){
 
   function updatePlayerPosition(e) {
-
        if(e.keyCode == "81") {
        $("<td>").addClass("black");
      }
-
       else if(e.keyCode == "80") {
       $("<td>").addClass("black");
     }       
