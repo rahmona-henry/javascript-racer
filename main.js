@@ -1,5 +1,5 @@
-$( document ).ready(function() {
-    console.log( "ready!" );
+$('document').ready(function() {
+ 
 
 //Users enter race track lenght
 var trackLength = prompt("Hello Racers,please choose your racetrack between: 5 and 15 lenghts " );
@@ -21,9 +21,11 @@ else if (trackLength>15)
       console.log(i);
       $(".track").append("<td>");
     };
+
+
 //add event listener for keys pressed by players
 
-document.addEventListener("keyup", updatePlayerPosition, false);
+$(document).on('keyup',function updatePlayerPosition){
 
   function updatePlayerPosition(e) {
 
@@ -36,7 +38,8 @@ document.addEventListener("keyup", updatePlayerPosition, false);
         $("#Player2").addClass("orange");
       }
 }
- 
+}
+
 
 
 });
