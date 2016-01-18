@@ -22,8 +22,8 @@ else if (trackLength>15)
       $(".track").append("<td>");
     };
 
-//Add EventListener that listens for users pushing their palyer keys
-$(document).on("keyup",".track",updatePlayerPosition)
+//Add EventListener that listens for users pushing their player keys and makes their cell active
+$(document).on("keyup","<td>",updatePlayerPosition)
 
   function updatePlayerPosition(e) {
 
