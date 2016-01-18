@@ -15,15 +15,15 @@ else if (trackLength>15)
   alert("Racetrack lenght must be between 5 to 15 please choose again");
 };
 
-//Create racetrack length based on users input
+//Create racetrack length based on players input
 
     for (var i = 1; i <= trackLength; i++) {
       console.log(i);
       $(".track").append("<td>");
     };
 
-//add event listener for key pressed by users
-$(document).on('keyup',updatePlayerPosition)
+//Add EventListener that listens for users pushing their palyer keys
+$(document).on("keyup",".track",updatePlayerPosition) {
 
   function updatePlayerPosition(e) {
 
@@ -34,5 +34,6 @@ $(document).on('keyup',updatePlayerPosition)
       else if(e.keyCode == "80") {
       $("<td>").addClass("black");
     }       
-}
+};
+
 });
