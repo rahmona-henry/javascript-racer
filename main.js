@@ -25,7 +25,7 @@ else if (trackLength>15)
 //add event listener for key pressed by users
  $(document).on('keyup', updatePlayerPosition)
 
-  function updatePlayerPosition {
+  function updatePlayerPosition() {
        if(e.keyCode == "81") {
        $("#Player1").addClass("blue");
      }
