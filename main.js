@@ -2,7 +2,7 @@ $('document').ready(function() {
  
 
 //Users enter race track lenght
-var trackLength = prompt("Hello Racers,please choose your racetrack between: 5 and 15 lenghts " );
+var trackLength = prompt("Hello Racers,please choose your racetrack between: 5 and 15 lenghts");
 
 //Check if racetrack is between 5 and 15 lenghts if not issue warning
 if(trackLength<5)
@@ -19,7 +19,7 @@ else if (trackLength>15)
 
     for (var i = 1; i <= trackLength; i++) {
       console.log(i);
-      $(".track").append("<td>");
+      $(".racer_table").append("<td>");
     };
 
 
