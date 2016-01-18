@@ -23,9 +23,10 @@ else if (trackLength>15)
     };
 
 //add event listener for key pressed by users
- $(document).on('keyup', updatePlayerPosition)
+ $(document).on('keyup',function updatePlayerPosition){
 
   function updatePlayerPosition(e) {
+
        if(e.keyCode == "81") {
        $("#Player1").addClass("blue");
      }
@@ -34,9 +35,9 @@ else if (trackLength>15)
       else {
         $("#Player2").addClass("orange");
       }
-
+      
 }
- 
+}
 
 
 });
