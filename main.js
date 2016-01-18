@@ -22,15 +22,15 @@ else if (trackLength>15)
 
 
 //Add EventListener that listens for users pushing their player keys and makes their cell active
-$(document).on("keyup","<td>",updatePlayerPosition){
+//$(document).on("keyup","<td>",updatePlayerPosition){
 
-  function updatePlayerPosition(e) {
-       if(e.keyCode == "81") {
-    $(".track.#player1.<td>").addClass("green");
-   }
-      else if(e.keyCode == "80") {
-    (".track.#player2.<td>").addClass("orange");
-   }       
-}
+  //function updatePlayerPosition(e) {
+      //if(e.keyCode == "81") {
+    //$(".track.#player1.<td>").addClass("green");
+   //}
+     ////// else if(e.keyCode == "80") {
+    //(".track.#player2.<td>").addClass("orange");
+  // }       
+//}
 
 });
