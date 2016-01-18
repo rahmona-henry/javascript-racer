@@ -22,20 +22,21 @@ else if (trackLength>15)
       $(".track").append("<td>");
     };
 //add event listener for key pressed by users
-window.addEventListener("keyup", updatePlayerPosition, false);{
+window.addEventListener("keyup", updatePlayerPosition, false);
   function updatePlayerPosition(e) {
        if(e.keyCode == "81") {
        $("#Player1").addClass("blue");
      }
 
+      //if(e.keyCode == "80") 
       else {
-        if(e.keyCode == "80") {
         $("#Player2").addClass("orange");
       }
 
 }
- }
+ 
 
 
-//});
+});
+
 
