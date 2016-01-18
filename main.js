@@ -28,15 +28,13 @@ else if (trackLength>15)
   function updatePlayerPosition(e) {
 
        if(e.keyCode == "81") {
-       $("#Player1").addClass("blue");
+       $(#Player1).addClass("blue");
      }
 
       //if(e.keyCode == "80") 
       else {
         $("#Player2").addClass("orange");
-      }
-      
-}
+ }      
 }
 
 
