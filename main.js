@@ -23,7 +23,7 @@ else if (trackLength>15)
     };
 
 //Add EventListener that listens for users pushing their palyer keys
-$(document).on("keyup",".track",updatePlayerPosition) {
+$(document).on("keyup",".track",updatePlayerPosition)
 
   function updatePlayerPosition(e) {
 
