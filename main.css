@@ -17,12 +17,16 @@ color: green;
   color: orange;
 }
 
-.racetrack td {
+ td {
   background-color: white;
   height: 20px;
   width: 20px;
 }
 
-.racetrack td.active {
-  background-color: black;
+#player1  td.active {
+  background-color: green;
+}
+
+#player2  td.active {
+  background-color: orange;
 }

@@ -20,36 +20,17 @@ else if (trackLength>15)
       $(".track").append("<td>");
     };
 
-var gameStart = function () {
-$("td").removeClass("active");
-$("#player1 td:first").addClass("active");
-
-$("#player2 td:first").addClass("active");
-
-var player1Move = 0;
-var player2Move = 0;
-
-};
-
-
-
-
-
-
-
-
-
 
 //Add EventListener that listens for users pushing their player keys and makes their cell active
-//$(document).on("keyup","<td>",updatePlayerPosition){
+$(document).on("keyup","<td>",updatePlayerPosition){
 
-  //function updatePlayerPosition(e) {
-       //if(e.keyCode == "81") {
-      //$("<td>").addClass("black");
-   // }
-      //else if(e.keyCode == "80") {
-      //$("<td>").addClass("black");
-   //}       
-//}
-//
+  function updatePlayerPosition(e) {
+       if(e.keyCode == "81") {
+    $(".racetrack.#player1.<td>").addClass("green");
+   }
+      else if(e.keyCode == "80") {
+    (".racetrack.#player2.<td>").addClass("orange");
+   }       
+}
+
 });
