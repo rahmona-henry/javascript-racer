@@ -26,10 +26,10 @@ $(document).on("keyup","<td>",updatePlayerPosition){
 
   function updatePlayerPosition(e) {
        if(e.keyCode == "81") {
-    $(".racetrack.#player1.<td>").addClass("green");
+    $(".track.#player1.<td>").addClass("green");
    }
       else if(e.keyCode == "80") {
-    (".racetrack.#player2.<td>").addClass("orange");
+    (".track.#player2.<td>").addClass("orange");
    }       
 }
 
