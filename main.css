@@ -8,3 +8,11 @@
 .racer_table td.active {
   background-color: black;
 };
+
+#player1 td.active {
+   background-color: orange;
+}
+
+#player1 td.active {
+   background-color: green;
+}
