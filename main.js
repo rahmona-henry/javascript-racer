@@ -10,23 +10,23 @@ var trackLength = 8;
      updatePlayer('player1_strip');        
      p1Moves++;
      }
-   //else {
-     //win("P1");
-   //} 
+   else {
+     win("P1");
+   } 
  }
  else if (keyID.keyCode === 81) {
    if (p2Moves<trackLength) {
      updatePlayer('player2_strip');
      p2Moves++;
      }
-   //else {
-     //win("P2");
-   //} 
+   else {
+     win("P2");
+   } 
  }   
 });                                              
 
 
-function updatePlayer (player) {     
+function updatePlayer(player) {     
  var activeCell = $("#" + player + "td.active");
  var moveCell = activeCell.next();
   
@@ -34,7 +34,9 @@ function updatePlayer (player) {
  moveCell.addClass("active");
 };
 
-
+var win = function (winner){
+  alert(winner + "wins")
+};
 
 
       
