@@ -2,7 +2,7 @@ $(document).on('keyup', function(keyID) {
 
 var p1Moves = 0;
 var p2Moves = 0;
-var trackLength = 0;
+var trackLength = 8;
 
 
  if (keyID.keyCode === 80){ 
