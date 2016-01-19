@@ -1,32 +1,9 @@
-table, th, td {
-    border: 3px solid black;
-    border-collapse: collapse;
- 
-}
-
-th, td, tr {
-  width: 70px;
-  height: 70px;
-}
-
-#Player1 th {
-color: green;
-}
-
-#Player2 th {
-  color: orange;
-}
-
- td {
+.racer_table td {
   background-color: white;
   height: 20px;
   width: 20px;
 }
 
-#player1 td.active {
-  background-color: green;
-}
-
-#player2 td.active {
-  background-color: orange;
+.racer_table td.active {
+  background-color: black;
 }
