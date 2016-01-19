@@ -1,9 +1,10 @@
-
-
-#player1 td.active {
-   background-color: orange;
+.racer_table td {
+  background-color: white;
+  border-style: solid;
+  height: 60px;
+  width: 60px;
 }
 
-#player2 td.active {
-   background-color: green;
+.racer_table td.active {
+  background-color: black;
 }
