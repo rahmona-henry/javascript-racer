@@ -5,6 +5,14 @@ var p2Moves = 0;
 var trackLength =7;
 
 
+  var restart = function() {
+    $("td").removeClass("active");
+    $("#player1_strip td:first").addClass("active");
+    $("#player2_strip td:first").addClass("active");
+
+    redMoves = 0;
+    blueMoves = 0;
+  };
 
 
 
