@@ -2,7 +2,15 @@ $('document').ready(function() {
 
 var p1Moves = 0;
 var p2Moves = 0;
-var trackLength = 7;
+var tracklenght =7;
+
+
+
+
+    
+
+
+
 
 //Keyup event
 $(document).on("keyup", function(keyID) {
