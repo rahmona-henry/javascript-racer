@@ -4,18 +4,6 @@ $('document').ready(function() {
  var p2Moves = 0; 
  var trackLength = 8;
 
-
-
-function updatePlayer (player) {     
- var activeCell = $("#" + player + "td.active");
- var moveCell = activeCell.next();
-  
- activeCell.removeClass("active");
- moveCell.addClass("active");
-}
-
- 
-
  $(document).on('keyup', function(keyID) { 
 
  if (keyID.keyCode === 80){ 
@@ -36,7 +24,16 @@ function updatePlayer (player) {
    //  win("P2");
   //} 
  }   
+});
+function updatePlayer (player) {     
+ var activeCell = $("#" + player + "td.active");
+ var moveCell = activeCell.next();
+  
+ activeCell.removeClass("active");
+ moveCell.addClass("active");
+}
 
 
 
-});      
+
+      
