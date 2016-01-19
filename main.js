@@ -1,18 +1,13 @@
-$('document').ready(function() {
+$(document).on('keyup', function(keyID) { 
 
- var p1Moves = 0;
- var p2Moves = 0; 
- var trackLength = 8;
-
- $(document).on('keyup', function(keyID) { 
 
  if (keyID.keyCode === 80){ 
    if (p1Moves<trackLength) {
-     updatePlayer('player1_strip');
+     updatePlayer('player1_strip');        
      p1Moves++;
      }
    //else {
-    // win("P1");
+     //win("P1");
    //} 
  }
  else if (keyID.keyCode === 81) {
@@ -20,18 +15,24 @@ $('document').ready(function() {
      updatePlayer('player2_strip');
      p2Moves++;
      }
-  // else {
-   //  win("P2");
-  //} 
+   //else {
+     //win("P2");
+   //} 
  }   
-});
+} ) ;                                              
+
+
+
+
+
+
 function updatePlayer (player) {     
  var activeCell = $("#" + player + "td.active");
  var moveCell = activeCell.next();
   
  activeCell.removeClass("active");
  moveCell.addClass("active");
-}
+};
 
 
 
