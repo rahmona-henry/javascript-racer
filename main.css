@@ -5,10 +5,6 @@
   width: 60px;
 }
 
-#player1_strip td.active {
-  background-color: orange;
-}
-
-#player2_strip td.active {
-  background-color: green;
-}
+.racer_table td.active {
+  background-color: black;
+};
