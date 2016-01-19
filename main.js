@@ -36,6 +36,7 @@ function updatePlayer(player) {
 
 var win = function (winner){
   alert(winner + "wins")
+  win();
 };
 
 
