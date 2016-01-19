@@ -1,26 +1,24 @@
 $('document').ready(function() {
 
-
 var p1Moves = 0;
 var p2Moves = 0;
-var trackLength = 8;
+var trackLength = 7;
 
 //Keyup event
-$(document).on('keyup', function(keyID) {
+$(document).on("keyup", function(keyID) {
  if (keyID.keyCode === 80){ 
-   if (p1Moves<trackLength-1) {
-     updatePlayer('player1_strip');        
+   if (p1Moves<trackLength - 1) {
+     updatePlayer("player1_strip");        
      p1Moves++;
      }else {
       win("P1")
    };
 
  }else if (keyID.keyCode === 81) {
-   if (p2Moves<trackLength-1) {
-     updatePlayer('player2_strip');
+   if (p2Moves<trackLength - 1) {
+     updatePlayer("player2_strip");
      p2Moves++;
-     }
-   else {
+     }else {
      win("P2")
    }; 
  };  
