@@ -2,7 +2,7 @@ $('document').ready(function() {
 
  var p1Moves = 0;
  var p2Moves = 0; 
- var tracklength = 8;
+ var trackLength = 8;
 
  $(document).on('keyup', function(keyID) { 
 
@@ -24,4 +24,15 @@ $('document').ready(function() {
    //  win("P2");
   //} 
  }   
-} ) ;      
+
+function updatePlayer (player) {     
+ var activeCell = $("#" + player + "td.active");
+ var moveCell = activeCell.next();
+  
+ activeCell.removeClass("active");
+ moveCell.addClass("active");
+
+
+
+
+});      
