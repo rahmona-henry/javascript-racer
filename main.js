@@ -1,4 +1,8 @@
-$(document).on('keyup', function(keyID) { 
+$(document).on('keyup', function(keyID) {
+
+var p1Moves = 0;
+var p2Moves = 0;
+var trackLength = 0;
 
 
  if (keyID.keyCode === 80){ 
@@ -19,11 +23,7 @@ $(document).on('keyup', function(keyID) {
      //win("P2");
    //} 
  }   
-} ) ;                                              
-
-
-
-
+});                                              
 
 
 function updatePlayer (player) {     
