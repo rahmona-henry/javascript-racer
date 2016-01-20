@@ -44,10 +44,6 @@ function win(winner){
   $("#player1_strip td").removeClass("active");   
   $("#player2_strip td").removeClass("active");
   
-  p1Moves = 0;
-  p2Moves = 0;
-  
-
   $("#player1_strip td:nth-child(2)").addClass("active");
   $("#player2_strip td:nth-child(2)").addClass("active");
 
