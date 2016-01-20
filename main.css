@@ -6,12 +6,12 @@
 }
 
 
-#player1_strip td.active {
+.racer_table td.active {
 background-color: orange;
  
 }
 
-#player2_strip td.active {
+.racer_table td.active {
   background-color: green;
-}
- 
+
+ }
