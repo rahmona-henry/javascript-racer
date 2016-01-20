@@ -6,11 +6,11 @@ var trackLength =7;
 
 
 //Keyup Event Listener
-$(document).on("keyup", function(keyID) {
+$(document).on('keyup', function(keyID) {
 
  if(keyID.keyCode === 80){ 
    if(p1Moves<trackLength) {
-     updatePlayer("player1_strip");        
+     updatePlayer('player1_strip');        
      p1Moves++;
      } 
       else {
@@ -20,7 +20,7 @@ $(document).on("keyup", function(keyID) {
 
  else if(keyID.keyCode === 81) {
    if (p2Moves<trackLength) {
-     updatePlayer("player2_strip");
+     updatePlayer('player2_strip');
      p2Moves++;
      }
       else {
