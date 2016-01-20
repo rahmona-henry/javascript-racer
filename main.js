@@ -41,7 +41,5 @@ function updatePlayer(player) {
 function win(winner){
   alert(winner + "wins");
 }
-
- } 
 });                                              
   
