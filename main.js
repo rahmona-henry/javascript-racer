@@ -5,21 +5,18 @@ var p2Moves = 0;
 var trackLength =7;
 
 
-  var restart = function() {
+var restart = function() {
     $("td").removeClass("active");
     $("#player1_strip td:first").addClass("active");
     $("#player2_strip td:first").addClass("active");
 
-    redMoves = 0;
-    blueMoves = 0;
   };
-
 
 
 //Keyup event
 $(document).on("keyup", function(keyID) {
  if (keyID.keyCode === 80){ 
-   if (p1Moves<trackLength - 1) {
+   if (p1Moves<trackLength) {
      updatePlayer("player1_strip");        
      p1Moves++;
      }else {
@@ -27,7 +24,7 @@ $(document).on("keyup", function(keyID) {
    };
 
  }else if (keyID.keyCode === 81) {
-   if (p2Moves<trackLength - 1) {
+   if (p2Moves<trackLength) {
      updatePlayer("player2_strip");
      p2Moves++;
      }else {
