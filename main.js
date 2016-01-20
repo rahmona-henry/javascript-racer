@@ -36,16 +36,7 @@ function updatePlayer(player) {
 
 function win(winner){
   alert(winner + "wins");
-  restart();
 };
-
-var restart = function() {
-    $("td").removeClass("active");
-    $("#player1_strip td:first").addClass("active");
-    $("#player2_strip td:first").addClass("active");
-
-  };
-
 
 
 });                                              
