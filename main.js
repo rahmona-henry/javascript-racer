@@ -51,11 +51,6 @@ function win(winner){
   $("#player1_strip td:nth-child(2)").addClass("active");
   $("#player2_strip td:nth-child(2)").addClass("active");
  
-  trackLength = 0; 
-  
-    location.reload();                         
-
-
-}                                             
+}
 });                                              
   
