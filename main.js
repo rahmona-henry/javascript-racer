@@ -5,24 +5,25 @@ var p2Moves = 0;
 var trackLength =7;
 
 
-//Keyup event
+//Keyup Event Listener
 $(document).on("keyup", function(keyID) {
  if (keyID.keyCode === 80){ 
    if (p1Moves<trackLength) {
      updatePlayer("player1_strip");        
      p1Moves++;
-     }else {
+     } else {
       win("P1")
-   };
+     }
+   }
 
- }else if (keyID.keyCode === 81) {
+ else if (keyID.keyCode === 81) {
    if (p2Moves<trackLength) {
      updatePlayer("player2_strip");
      p2Moves++;
      }else {
      win("P2")
-   }; 
- };  
+   } 
+ }  
 });
 
 function updatePlayer(player) {     
