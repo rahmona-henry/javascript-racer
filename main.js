@@ -1,4 +1,4 @@
-$('document').ready(function() {
+$(document).ready(function() {
 
 var p1Moves = 0;
 var p2Moves = 0;
