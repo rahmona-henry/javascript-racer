@@ -15,7 +15,7 @@ $(document).ready(function() {
         trackLength = prompt("Players set your preferred track length between 5 -20 lenghts");
 
         //Use the if statement to ensure the player input is between the specified track length
-        if (trackLength < 5 || trackLength > 20) {
+        if (trackLength < 5 || trackLength > 20 ||) {
             var newtrackLength = alert("Please choose a track lenght between 5-20");
             trackLength = newtrackLength;
             gameOver();
