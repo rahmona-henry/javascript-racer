@@ -5,7 +5,7 @@ var p2Laps = 0;
 var trackLength = 7;
 
 //function set () {                                                      
-trackLength = prompt("Players set the track lenght between 5 -15");
+trackLength = prompt("Players set the track length between 5 -15");
     
   //if (trackLength > 30) {
       //trackLength = 30;
