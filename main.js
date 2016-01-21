@@ -33,35 +33,41 @@ for (var i = 1; i <= trackLength; i++) {
       $("#player1_strip").append("<td>");
       $("#player2_strip").append("<td>");
   };
+
 //Use A keyboard EventListener to listen for a 'keyup' event on keyboard letters Q & P
 $(document).on('keyup', function(keyID) {     
 
-  if (keyID.keyCode === 80){
+//If the letter Q is pushed and the player1 postion is less than the length of the racetrack
+//the updatePlayer function gets called and the P1's position moves forward one cell in the table
+  if(keyID.keyCode === 81){
 
      if(p1Laps<trackLength) {                
      updatePlayer('player1_strip');          
      p1Laps++;                              
      }
-
+//Else the win function is called
    else {
      win("Player1");                              
- } 
+  } 
 }
-
-  if (keyID.keyCode === 81) {
+//If the letter P is pushed and P2'S postion is less than the length of the racetrack
+//the updatePlayer function gets called and the P2's position moves forward one cell in the table
+  if(keyID.keyCode === 80) {
 
       if (p2Laps<trackLength) {
       updatePlayer('player2_strip');
       p2Laps++;
       }
-
- else {
+//Else the win function is called
+   else {
    win("Player2");
  } 
 }  
- 
+
 });  
 
+//The updatePlayer function uses the .next, .addClass and .removeClass to update the players
+// position on the racetrack and highlight which cell position the player is currently sitting on
 updatePlayer = function(player) {               
 
   var activeCell = $("#" + player + " td.active");
@@ -71,8 +77,10 @@ updatePlayer = function(player) {
   moveCell.addClass("active");
 };
 
+//The win funtion in the parameter winner from the EventListener and uses an alert
+// dialog box to display the winning player 
 function win(winner) {
-alert (winner+" wins!");                    
+ alert (winner+" wins!");                    
  
 
 //$("#player1_strip td").removeClass("active");   
