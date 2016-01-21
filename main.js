@@ -27,7 +27,7 @@ trackLength = prompt("Players set your preferred track length between 5 -15 leng
      //alert("Please make sure you enter a number not a letter")
 //};
 
-while(trackLength < 5||trackLength > 15|| trackLength !== NaN) 
+if (trackLength < 5||trackLength > 15|| trackLength !== NaN) 
   prompt("blassssss");
   gameOver();
 };
