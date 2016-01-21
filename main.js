@@ -3,6 +3,8 @@ $(document).ready(function(){
 //Create a variable Laps which accounts for the players moves on the racetrack
 //Create a variable trackLength which takes the players input to create the lenght of the racetrack
 
+
+var intialise = function(firsttime)
 var p1Laps = 0;
 var p2Laps = 0;
 var trackLength = 0;
@@ -65,6 +67,11 @@ $(document).on('keyup', function(keyID) {
 }  
 
 });  
+}
+intialise();
+
+
+
 
 //The updatePlayer function uses the .next, .addClass and .removeClass methods to update the players
 // position on the racetrack and highlight which cell position the player is currently sitting on
@@ -88,7 +95,7 @@ function win(winner) {
 
  if (p1Laps===trackLength);
  {
-  var p1Laps = 0;
+  intialise();
  }
 }
 //$("#player1_strip td").removeClass("active");   
