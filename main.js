@@ -27,7 +27,7 @@ trackLength = prompt("Players set your preferred track length between 5 -15 leng
      //alert("Please make sure you enter a number not a letter")
 //};
 
-if (trackLength < 5||trackLength > 15{
+if(trackLength < 5||trackLength > 15){
   prompt("blassssss");
 };
 gameOver();
