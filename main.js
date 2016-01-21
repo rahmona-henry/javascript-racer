@@ -35,7 +35,7 @@ for (var i = 1; i <= trackLength; i++) {
       $("#player1_strip").append("<td>");
       $("#player2_strip").append("<td>");
   };
-var intialise = function()
+
 //Use A keyboard EventListener to listen for a 'keyup' event on keyboard letters Q & P
 $(document).on('keyup', function(keyID) {     
 
@@ -67,8 +67,7 @@ $(document).on('keyup', function(keyID) {
 }  
 
 });  
-}
-intialise();
+
 
 
 
@@ -93,10 +92,6 @@ function win(winner) {
 
  function onGameOver(){
 
- if (p1Laps===trackLength);
- {
-  intialise();
- }
 }
 //$("#player1_strip td").removeClass("active");   
 //$("#player2_strip td").removeClass("active");
