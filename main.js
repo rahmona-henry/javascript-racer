@@ -12,7 +12,7 @@ var trackLength = 0;
 
 trackLength = prompt("Players set your preferred track length between 5 -15 lenghts");
   
- if (trackLength < 5 && trackLength > 15) {
+ if (trackLength < 5) {
     alert("Warning! Please ensure track length is between 5-15 lenghts")
   };
 
