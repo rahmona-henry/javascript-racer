@@ -82,15 +82,15 @@ updatePlayer = function(player) {
 function win(winner) {
  alert(winner+" wins!");                    
  
+}  
 
+ function onGameOver(){
 
- function onGameOver()
-
- if(p1Laps===trackLength);
+ if (p1Laps===trackLength);
  {
   var p1Laps = 0;
  }
-
+}
 //$("#player1_strip td").removeClass("active");   
 //$("#player2_strip td").removeClass("active");
 
@@ -102,6 +102,6 @@ function win(winner) {
  
 //trackLength = 0; 
 //location.reload();                          
-}                                              
+                                            
                                                                                                
 });
