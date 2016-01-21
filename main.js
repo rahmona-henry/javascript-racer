@@ -87,17 +87,18 @@ updatePlayer = function(player) {
 // dialog box to display the winning player 
 function win(winner) {
  alert(winner+" wins!");                    
- 
+
 }  
 
  function onGameOver(){
 
-  if (P1Laps ==== trackLength) {
+  if(P1Laps ==== trackLength) {
 
     startGame();
   }
 
 }
+startGame();
 //$("#player1_strip td").removeClass("active");   
 //$("#player2_strip td").removeClass("active");
 
