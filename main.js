@@ -1,15 +1,25 @@
 $(document).ready(function(){
+ 
+//Create a variable Laps which accounts for the players moves on the racetrack
+//Create a variable trackLength which takes the players input to create the lenght of the racetrack
 
 var p1Laps = 0;
 var p2Laps = 0;
-var trackLength = 7;
+var trackLength = 0;
 
-//function set () {                                                      
-trackLength = prompt("Players set the track length between 5 -15");
-    
-  //if (trackLength > 30) {
-      //trackLength = 30;
- //}
+//Use the prompt method() to display a dialog box which asks the players for their preferred
+//tracklength between 5-15 table cells
+
+trackLength = prompt("Players set your preferred track length between 5 -15 lenghts");
+  
+ if (trackLength < 5 && trackLength > 15) {
+    alert("Warning! Please ensure track length is between 5-15 lenghts")
+  };
+
+//if (trackLength > 15) {
+    //alert(" Warning! Please ensure track length is between 5-15 lenghts")
+
+
 
 for (var i = 1; i <= trackLength; i++) {
      
@@ -51,7 +61,7 @@ updatePlayer = function(player) {
 };
 
 function win(winner) {
-alert (winner+"wins!");                    
+alert (winner+" wins!");                    
  
 
 //$("#player1_strip td").removeClass("active");   
