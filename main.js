@@ -92,6 +92,11 @@ function win(winner) {
 
  function onGameOver(){
 
+  if (P1Laps ==== trackLength) {
+
+    startGame();
+  }
+
 }
 //$("#player1_strip td").removeClass("active");   
 //$("#player2_strip td").removeClass("active");
