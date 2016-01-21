@@ -12,11 +12,11 @@ var trackLength = 0;
 //tracklength between 5-15 table cells
 
 var startGame = function(trackLenght){
-trackLength = prompt("Players set your preferred track length between 5 -25 lenghts");
+trackLength = prompt("Players set your preferred track length between 5 -20 lenghts");
 
 //Use if statement to ensure the player input is between the specified track length
-if(trackLength < 5||trackLength > 25){
-var newtrackLength =  alert("Please choose a track lenght between 5-25");
+if(trackLength < 5||trackLength > 20){
+var newtrackLength =  alert("Please choose a track lenght between 5-20");
  trackLength = newtrackLength;
 };
 
