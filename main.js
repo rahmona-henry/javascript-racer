@@ -31,7 +31,7 @@ if(trackLength < 5||trackLength > 15){
  newtrackLength =  alert("blassssss");
  trackLength = newtrackLength;
 };
-startGame();
+gameOver();
 
 //Use a for loop to create the racetrack length based on the players input
 for (var i = 1; i <= trackLength; i++) {
