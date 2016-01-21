@@ -87,7 +87,7 @@ updatePlayer = function(player) {
 // dialog box to display the winning player 
 function win(winner) {
 alert(winner+" wins!");                    
-startGame(trackLenght); 
+startGame(); 
 }  
 
  
