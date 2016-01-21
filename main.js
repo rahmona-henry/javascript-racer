@@ -89,10 +89,12 @@ function win(winner) {
 alert(winner+" wins!");                    
 }  
 
-mouseClicked = function()
-{
-  Program.restart();
-};
+do 
+{ startGame();
+
+}while ((confirm("play again"));
+
+
 //$("#player1_strip td").removeClass("active");   
 //$("#player2_strip td").removeClass("active");
 
