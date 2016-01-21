@@ -89,11 +89,7 @@ function win(winner) {
 alert(winner+" wins!");                    
 }  
 
-do 
-{ startGame();
-
-}while ((confirm("play again"));
-
+window.location.reload(true);
 
 //$("#player1_strip td").removeClass("active");   
 //$("#player2_strip td").removeClass("active");
