@@ -42,33 +42,34 @@ $(document).on('keyup', function(keyID) {
   }   
 });  
 
-var updatePlayer = function(player) {  
+function updatePlayer (player) {               //Updates player position by adding and removing active class to table cells.
 
- var activeCell = $("#" + player + "td.active");
- var moveCell = activeCell.next();
-  
- activeCell.removeClass("active");
- moveCell.addClass("active");
+  var activeCell = $("#" + player + " td.active");
+  var moveCell = activeCell.next();
+   
+  activeCell.removeClass("active");
+  moveCell.addClass("active");
+
 };
 
 function win(winner) {
-  alert(winner+" wins");
+  alert (winner+" has won");                    //Lets user know who won
  
 
-$("#player1_strip td").removeClass("active");   
-$("#player2_strip td").removeClass("active");
+  $("#player1_strip td").removeClass("active");   // and the rest resets the game. (Probably not needed as I reload the page)
+  $("#player2_strip td").removeClass("active");
 
-p1Moves = 0;
-p2Moves = 0;
+  p1Moves = 0;
+  p2Moves = 0;
   
-$("#player1_strip td:nth-child(2)").addClass("active");
-$("#player2_strip td:nth-child(2)").addClass("active");
-
+  $("#player1_strip td:nth-child(2)").addClass("active");
+  $("#player2_strip td:nth-child(2)").addClass("active");
  
   trackLength = 0; 
   
-    location.reload();                          
-
-}
-});                                              
-  
+    location.reload();                          //NOTE; I have made the page reload after a player wins because I could not figure out
+                                                //how to delete the tds from my table, which meant a user either had to keep the same 
+}                                               //length track or my code would add their track choice to what was already there, and it 
+                                                //would get longer and longer. I wanted the user to be able to choose the track length every time
+                                                // so went with a page reload, which is probably not the 'proper' way to do it, but the quickest.   
+});
