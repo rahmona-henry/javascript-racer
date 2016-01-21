@@ -27,11 +27,10 @@ trackLength = prompt("Players set your preferred track length between 5 -15 leng
      //alert("Please make sure you enter a number not a letter")
 //};
 
-if (trackLength < 5||trackLength > 15|| trackLength !== NaN) {
+if (trackLength < 5||trackLength > 15{
   prompt("blassssss");
-
 };
-
+gameOver();
 //Use a for loop to create the racetrack length based on the players input
 for (var i = 1; i <= trackLength; i++) {
 
