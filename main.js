@@ -87,10 +87,12 @@ updatePlayer = function(player) {
 // dialog box to display the winning player 
 function win(winner) {
 alert(winner+" wins!");                    
-startGame(); 
 }  
 
- 
+mouseClicked = function()
+{
+  Program.restart();
+};
 //$("#player1_strip td").removeClass("active");   
 //$("#player2_strip td").removeClass("active");
 
