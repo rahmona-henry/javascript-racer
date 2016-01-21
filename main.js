@@ -89,8 +89,10 @@ function win(winner) {
 alert(winner+" wins!");                    
 }  
 
+function gameOver() {
 window.location.reload(true);
-
+}
+gameOver();
 //$("#player1_strip td").removeClass("active");   
 //$("#player2_strip td").removeClass("active");
 
