@@ -69,7 +69,7 @@ $(document).on('keyup', function(keyID) {
 });  
 
 }
-
+startGame();
 
 
 //The updatePlayer function uses the .next, .addClass and .removeClass methods to update the players
