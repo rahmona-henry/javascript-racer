@@ -4,7 +4,6 @@ $(document).ready(function(){
 //Create a variable trackLength which takes the players input to create the lenght of the racetrack
 
 
-var intialise = function(firsttime)
 var p1Laps = 0;
 var p2Laps = 0;
 var trackLength = 0;
