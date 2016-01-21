@@ -11,7 +11,7 @@ trackLength = prompt("Players set the track length between 5 -15");
       //trackLength = 30;
  //}
 
-for (var i = 0; i <= trackLength; i++) {
+for (var i = 1; i <= trackLength; i++) {
      
       $("#player1_strip").append("<td>");
       $("#player2_strip").append("<td>");
