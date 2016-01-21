@@ -23,24 +23,23 @@ var trackLength = 7;
 $(document).on('keyup', function(keyID) {     
 
   if (keyID.keyCode === 80){  
-
-      if(p1Laps<trackLength) {                
-         updatePlayer('player1_strip');          
-         p1Laps++;                              
-    }
-       else {
-        win("Player1");                              
-    } 
-  }
-        else if (keyID.keyCode === 81) {
-         if (p2Laps<trackLength) {
-            updatePlayer('player2_strip');
-            p2Laps++;
-    }
-         else {
-          win("Player2");
-  } 
- }   
+if(p1Laps<trackLength) {                
+ updatePlayer('player1_strip');          
+p1Laps++;                              
+}
+else {
+win("Player1");                              
+} 
+}
+else if (keyID.keyCode === 81) {
+if (p2Laps<trackLength) {
+updatePlayer('player2_strip');
+p2Laps++;
+}
+else {
+win("Player2");
+} 
+}   
 });  
 
 updatePlayer = function(player) {               
@@ -52,22 +51,21 @@ updatePlayer = function(player) {
   moveCell.addClass("active");
 };
 
-  function win(winner) {
-  alert (winner+"wins!");                    
+function win(winner) {
+alert (winner+"wins!");                    
  
 
-  $("#player1_strip td").removeClass("active");   
-  $("#player2_strip td").removeClass("active");
+//$("#player1_strip td").removeClass("active");   
+//$("#player2_strip td").removeClass("active");
 
-  p1Laps = 0;
-  p2Laps = 0;
+//p1Laps = 0;
+//p2Laps = 0;
   
-  $("#player1_strip td:nth-child(2)").addClass("active");
-  $("#player2_strip td:nth-child(2)").addClass("active");
+//$("#player1_strip td:nth-child(2)").addClass("active");
+//$("#player2_strip td:nth-child(2)").addClass("active");
  
-  trackLength = 0; 
-  
-    location.reload();                          
+//trackLength = 0; 
+//location.reload();                          
 }                                              
                                                                                                
 });
