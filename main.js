@@ -11,7 +11,8 @@ var trackLength = 0;
 //tracklength between 5-15 table cells
 
 trackLength = prompt("Players set your preferred track length between 5 -15 lenghts");
-  
+
+//Use if statements to ensure the player input is between the specified track lenght
  if (trackLength < 5) {
     alert("Warning! Please ensure track length is between 5-15 lenghts")
   };
@@ -20,9 +21,9 @@ trackLength = prompt("Players set your preferred track length between 5 -15 leng
     alert(" Warning! Please ensure track length is between 5-15 lenghts")
   };
 
-   if(trackLength !== NaN) {
-     alert("Please make sure you enter a number not a letter")
-};
+   //if(trackLength !== NaN) {
+     //alert("Please make sure you enter a number not a letter")
+//};
 
 //Use a for loop to create the racetrack length based on the players input
 for (var i = 1; i <= trackLength; i++) {
@@ -32,27 +33,33 @@ for (var i = 1; i <= trackLength; i++) {
       $("#player1_strip").append("<td>");
       $("#player2_strip").append("<td>");
   };
-  
+//Use A keyboard EventListener to listen for a 'keyup' event on keyboard letters Q & P
 $(document).on('keyup', function(keyID) {     
 
-  if (keyID.keyCode === 80){  
-if(p1Laps<trackLength) {                
- updatePlayer('player1_strip');          
-p1Laps++;                              
+  if (keyID.keyCode === 80){
+
+     if(p1Laps<trackLength) {                
+     updatePlayer('player1_strip');          
+     p1Laps++;                              
+     }
+
+   else {
+     win("Player1");                              
+ } 
 }
-else {
-win("Player1");                              
-} 
-}
-else if (keyID.keyCode === 81) {
-if (p2Laps<trackLength) {
-updatePlayer('player2_strip');
-p2Laps++;
-}
-else {
-win("Player2");
-} 
-}   
+
+  if (keyID.keyCode === 81) {
+
+      if (p2Laps<trackLength) {
+      updatePlayer('player2_strip');
+      p2Laps++;
+      }
+
+ else {
+   win("Player2");
+ } 
+}  
+ 
 });  
 
 updatePlayer = function(player) {               
