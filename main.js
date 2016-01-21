@@ -18,8 +18,9 @@ trackLength = prompt("Players set your preferred track length between 5 -25 leng
 if(trackLength < 5||trackLength > 15){
 var newtrackLength =  alert("Please choose a track lenght between 5-25");
  trackLength = newtrackLength;
-};
 startGame();
+};
+
 
 //Use a for loop to create the racetrack length based on the players input
 for (var i = 1; i <= trackLength; i++) {
