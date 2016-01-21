@@ -11,6 +11,7 @@ var trackLength = 0;
 //Use the prompt method() to display a dialog box which asks the players for their preferred
 //tracklength between 5-15 table cells
 
+var startGame = function(trackLenght){
 trackLength = prompt("Players set your preferred track length between 5 -15 lenghts");
 
 //Use if statements to ensure the player input is between the specified track lenght
@@ -67,7 +68,7 @@ $(document).on('keyup', function(keyID) {
 
 });  
 
-
+}
 
 
 
