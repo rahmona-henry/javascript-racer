@@ -16,24 +16,23 @@ trackLength = prompt("Players set your preferred track length between 5 -15 leng
     alert("Warning! Please ensure track length is between 5-15 lenghts")
   };
 
-  else if (trackLength > 15) {
+   if (trackLength > 15) {
     alert(" Warning! Please ensure track length is between 5-15 lenghts")
   };
 
-  else (trackLength !== NaN) {
+   if(trackLength !== NaN) {
      alert("Please make sure you enter a number not a letter")
 };
 
-
-
+//Use a for loop to create the racetrack length based on the players input
 for (var i = 1; i <= trackLength; i++) {
-     
+
+//Used the JQuery .append method to insert the required number of table cells/track lenght
+// at the end of the racetrack   
       $("#player1_strip").append("<td>");
       $("#player2_strip").append("<td>");
   };
-//}
-
-//set();
+  
 $(document).on('keyup', function(keyID) {     
 
   if (keyID.keyCode === 80){  
