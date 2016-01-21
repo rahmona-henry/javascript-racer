@@ -1,10 +1,27 @@
-$(document).ready(function() {
+
+$(document).ready(function(){
 
 var p1Moves = 0;
 var p2Moves = 0;
-var trackLength =7;
+var trackLength = 0;
 
+function set () {                                                       //Function to let user set track length and build it.
+    
+  trackLength = prompt("P1 use 'p' to move. \nP2 use 'q' to move.", 
+                        "Set a track length. MAX 30");
+    
+  if (trackLength > 30) {
+      trackLength = 30;
+  }
 
+  for (var i = 1; i <= trackLength; i++) {
+     
+      $("#player1_strip").append("<td>");
+      $("#player2_strip").append("<td>");
+  };
+}
+
+set();
 //Keyup Event Listener
 $(document).on('keyup', function(keyID) {
 
