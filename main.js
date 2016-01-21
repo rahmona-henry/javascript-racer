@@ -16,14 +16,13 @@ trackLength = prompt("Players set your preferred track length between 5 -15 leng
     alert("Warning! Please ensure track length is between 5-15 lenghts")
   };
 
-  if (trackLength > 15) {
+  else if (trackLength > 15) {
     alert(" Warning! Please ensure track length is between 5-15 lenghts")
   };
 
-  if (trackLength !== NaN) {
-     alert("Please make sure you enter a number")
+  else (trackLength !== NaN) {
+     alert("Please make sure you enter a number not a letter")
 };
-
 
 
 
