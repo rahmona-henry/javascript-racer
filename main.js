@@ -35,7 +35,7 @@ for (var i = 1; i <= trackLength; i++) {
       $("#player1_strip").append("<td>");
       $("#player2_strip").append("<td>");
   };
-
+var intialise = function()
 //Use A keyboard EventListener to listen for a 'keyup' event on keyboard letters Q & P
 $(document).on('keyup', function(keyID) {     
 
