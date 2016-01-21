@@ -15,19 +15,22 @@ var startGame = function(trackLenght){
 trackLength = prompt("Players set your preferred track length between 5 -15 lenghts");
 
 //Use if statements to ensure the player input is between the specified track lenght
- if(trackLength < 5) {
-    alert("Warning! Please ensure track length is between 5-15 lenghts")
-    gameOver();
-  };
+// if(trackLength < 5) {
+    //alert("Warning! Please ensure track length is between 5-15 lenghts")
+  //};
 
- else if (trackLength > 15) {
-    alert(" Warning! Please ensure track length is between 5-15 lenghts")
-    gameOver();
-  };
+ //else if (trackLength > 15) {
+    //alert(" Warning! Please ensure track length is between 5-15 lenghts")
+  //};
 
-   //if(trackLength !== NaN) {
+   // {
      //alert("Please make sure you enter a number not a letter")
 //};
+
+while(trackLength < 5||trackLength > 15|| trackLength !== NaN) 
+  prompt("blassssss");
+  gameOver();
+};
 
 //Use a for loop to create the racetrack length based on the players input
 for (var i = 1; i <= trackLength; i++) {
