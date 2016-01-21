@@ -2,24 +2,24 @@ $(document).ready(function(){
 
 var p1Moves = 0;
 var p2Moves = 0;
-var trackLength = 0;
+var trackLength = 7;
 
-function set () {                                                      
-  trackLength = prompt("P1 use 'p' to move. \nP2 use 'q' to move.", 
-                        "Set a track length. MAX 30");
+//function set () {                                                      
+ // trackLength = prompt("P1 use 'p' to move. \nP2 use 'q' to move.", 
+                        //"Set a track length. MAX 30");
     
-  if (trackLength > 30) {
-      trackLength = 30;
-  }
+  //if (trackLength > 30) {
+      //trackLength = 30;
+ //}
 
-  for (var i = 1; i <= trackLength; i++) {
+  //for (var i = 1; i <= trackLength; i++) {
      
-      $("#player1_strip").append("<td>");
-      $("#player2_strip").append("<td>");
-  };
-}
+      //$("#player1_strip").append("<td>");
+      //$("#player2_strip").append("<td>");
+  //};
+//}
 
-set();
+//set();
 $(document).on('keyup', function(keyID) {     
 
   if (keyID.keyCode === 80){                 
