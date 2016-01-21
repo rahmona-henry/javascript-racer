@@ -86,13 +86,14 @@ updatePlayer = function(player) {
 //The win funtion takes in the parameter winner from the EventListener and uses an alert
 // dialog box to display the winning player 
 function win(winner) {
-alert(winner+" wins!");                    
+alert(winner+" wins!");
+gameOver();                    
 }  
 
 function gameOver() {
 window.location.reload(true);
 }
-gameOver();
+
 //$("#player1_strip td").removeClass("active");   
 //$("#player2_strip td").removeClass("active");
 
