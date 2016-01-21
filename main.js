@@ -15,12 +15,14 @@ var startGame = function(trackLenght){
 trackLength = prompt("Players set your preferred track length between 5 -15 lenghts");
 
 //Use if statements to ensure the player input is between the specified track lenght
- if (trackLength < 5) {
+ if(trackLength < 5) {
     alert("Warning! Please ensure track length is between 5-15 lenghts")
+    gameOver();
   };
 
-   if (trackLength > 15) {
+ else if (trackLength > 15) {
     alert(" Warning! Please ensure track length is between 5-15 lenghts")
+    gameOver();
   };
 
    //if(trackLength !== NaN) {
@@ -84,27 +86,20 @@ updatePlayer = function(player) {
 };
 
 //The win funtion takes in the parameter winner from the EventListener and uses an alert
-// dialog box to display the winning player 
+// dialog box to display the winning player
 function win(winner) {
 alert(winner+" wins!");
 gameOver();                    
 }  
+//A gameOver function is used to reload the game after a player has a won. The reload() method is used to reload the current document.
+
+//The reload() method does the same as the reload button in your browser.
+//By default, the reload() method reloads the page from the cache, but you can force it to //
+//reload the page from the server by setting the forceGet parameter to true: location.reload(true)
 
 function gameOver() {
 window.location.reload(true);
-}
-
-//$("#player1_strip td").removeClass("active");   
-//$("#player2_strip td").removeClass("active");
-
-//p1Laps = 0;
-//p2Laps = 0;
-  
-//$("#player1_strip td:nth-child(2)").addClass("active");
-//$("#player2_strip td:nth-child(2)").addClass("active");
- 
-//trackLength = 0; 
-//location.reload();                          
+}                  
                                             
                                                                                                
 });
