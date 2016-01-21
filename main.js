@@ -66,7 +66,7 @@ $(document).on('keyup', function(keyID) {
 
 });  
 
-//The updatePlayer function uses the .next, .addClass and .removeClass to update the players
+//The updatePlayer function uses the .next, .addClass and .removeClass methods to update the players
 // position on the racetrack and highlight which cell position the player is currently sitting on
 updatePlayer = function(player) {               
 
@@ -77,11 +77,19 @@ updatePlayer = function(player) {
   moveCell.addClass("active");
 };
 
-//The win funtion in the parameter winner from the EventListener and uses an alert
+//The win funtion takes in the parameter winner from the EventListener and uses an alert
 // dialog box to display the winning player 
 function win(winner) {
- alert (winner+" wins!");                    
+ alert(winner+" wins!");                    
  
+
+
+ function onGameOver()
+
+ if(p1Laps===trackLength);
+ {
+  var p1Laps = 0;
+ }
 
 //$("#player1_strip td").removeClass("active");   
 //$("#player2_strip td").removeClass("active");
