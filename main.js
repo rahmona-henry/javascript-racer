@@ -86,6 +86,18 @@ $(document).ready(function() {
         moveCell.addClass("active");
     };
 
+
+ function randomColour () {
+    return '#' + Math.random().toString(16).slice(2, 8);
+  }
+
+  $('keyID').on('keyup', function () {
+    $('player2_strip').css('background-color', randomColour());
+  })
+randomColour();
+
+
+
     //The win funtion takes in the parameter winner from the EventListener and uses an alert
     // dialog box to display the winning player
     
@@ -104,11 +116,4 @@ $(document).ready(function() {
     }
 
 
- function randomColour () {
-    return '#' + Math.random().toString(16).slice(2, 8);
-  }
-
-  $('keyID').on('keyup', function () {
-    $('player2_strip').css('background-color', randomColour());
-  });
 });
