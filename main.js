@@ -88,7 +88,7 @@ $(document).ready(function() {
 
 
   $('#button').on('keyup')
-    $('body').css('background-color', 'red');
+    $('td.active').css('background-color', 'red');
 
  
 
