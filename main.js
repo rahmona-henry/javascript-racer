@@ -87,14 +87,14 @@ $(document).ready(function() {
     };
 
 
- function randomColour () {
-    return '#' + Math.random().toString(16).slice(2, 8);
-  }
+ //function randomColour () {
+    //return '#' + Math.random().toString(16).slice(2, 8);
+  //}
 
-  $('player2_strip').on('keyup', function () {
-    $('td.active').css('background-color', randomColour());
+  $('player2_strip').on('keyup')
+    $('td.active').css('background-color','red');
   })
-randomColour();player2_strip
+//randomColour();player2_strip
 
 
 
