@@ -87,7 +87,7 @@ $(document).ready(function() {
     };
 
 
-  $('#button').on('click')
+  $('#button').on('keyup')
     $('body').css('background-color', 'red');
 
  
