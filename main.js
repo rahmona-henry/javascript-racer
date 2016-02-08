@@ -91,10 +91,10 @@ $(document).ready(function() {
     return '#' + Math.random().toString(16).slice(2, 8);
   }
 
-  $('td.active').on('keyup', function () {
-    $('player2_strip').css('background-color', randomColour());
+  $('player2_strip').on('keyup', function () {
+    $('td.active').css('background-color', randomColour());
   })
-randomColour();
+randomColour();player2_strip
 
 
 
