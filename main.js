@@ -90,7 +90,8 @@ $(document).ready(function() {
     return '#' + Math.random().toString(16).slice(2, 8);
   }
 
-        .on('keyup', function () {
+        
+        $(document).on('keyup', function () {
     $('td.active').css('background-color', randomColour());
 
  });
