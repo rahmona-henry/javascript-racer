@@ -87,14 +87,10 @@ $(document).ready(function() {
     };
 
 
- //function randomColour () {
-    //return '#' + Math.random().toString(16).slice(2, 8);
-  //}
+  $('#button').on('click')
+    $('body').css('background-color', 'red');
 
-  $('player2_strip').on('keyup')
-    $('td.active').css('background-color','red');
-  })
-//randomColour();player2_strip
+ 
 
 
 
