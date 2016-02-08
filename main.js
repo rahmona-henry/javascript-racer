@@ -92,7 +92,7 @@ $(document).ready(function() {
 
         
         $(document).on('keyup', function () {
-    $('.racer_table td.active').css('background-color', randomColour());
+    $('player1_strip').css('background-color', randomColour());
 
  });
 
