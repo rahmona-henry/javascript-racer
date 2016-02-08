@@ -87,7 +87,7 @@ $(document).ready(function() {
     };
 
 
-  $('#button').on('keyup')
+  $('#button').on('active')
     $('td.active').css('background-color', 'red');
 
  
