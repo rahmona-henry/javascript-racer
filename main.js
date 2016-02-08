@@ -86,11 +86,14 @@ $(document).ready(function() {
         moveCell.addClass("active");
     };
 
+  function randomColour () {
+    return '#' + Math.random().toString(16).slice(2, 8);
+  }
 
-  $('#button').on('active')
-    $('td.active').css('background-color', 'red');
+  $('player1_strip').on('keyup', function () {
+    $('td.active').css('background-color', randomColour());
 
- 
+ });
 
 
 
