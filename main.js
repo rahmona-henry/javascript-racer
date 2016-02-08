@@ -90,7 +90,7 @@ $(document).ready(function() {
     return '#' + Math.random().toString(16).slice(2, 8);
   }
 
-  $('player1_strip').on('keyup', function () {
+        .on('keyup', function () {
     $('td.active').css('background-color', randomColour());
 
  });
