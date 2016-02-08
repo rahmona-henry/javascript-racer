@@ -91,7 +91,7 @@ $(document).ready(function() {
     return '#' + Math.random().toString(16).slice(2, 8);
   }
 
-  $('td.active').on('keyup', function () {
+  $('active').on('keyup', function () {
     $('player2_strip').css('background-color', randomColour());
   })
 randomColour();
