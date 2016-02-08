@@ -108,7 +108,7 @@ $(document).ready(function() {
     return '#' + Math.random().toString(16).slice(2, 8);
   }
 
-  $('keyID.keyCode === 81').on('keyup', function () {
+  $('keyID').on('keyup', function () {
     $('player2_strip').css('background-color', randomColour());
   });
 });
