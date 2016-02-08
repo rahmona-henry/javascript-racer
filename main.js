@@ -15,6 +15,7 @@ $(document).ready(function() {
         trackLength = prompt("Players set your preferred track length between 5 -20 lenghts");
 
         //Use the if statement to ensure the player input is between the specified track length
+        
         if (trackLength < 5 || trackLength > 20) {
             var newtrackLength = alert("Please choose a track lenght between 5-20");
             trackLength = newtrackLength;
@@ -23,19 +24,23 @@ $(document).ready(function() {
 
 
         //Use a for loop to create the racetrack length based on the players input
+        
         for (var i = 1; i <= trackLength; i++) {
 
             //Used the JQuery .append method to insert the required number of table cells/track lenght
             // at the end of the racetrack   
+            
             $("#player1_strip").append("<td>");
             $("#player2_strip").append("<td>");
         };
 
         //Use A keyboard EventListener to listen for a 'keyup' event on keyboard letters Q & P
+        
         $(document).on('keyup', function(keyID) {
 
             //If the letter Q is pushed and the player1 postion is less than the length of the racetrack
             //the updatePlayer function gets called and the P1's position moves forward one cell in the table
+            
             if (keyID.keyCode === 81) {
 
                 if (p1Laps < trackLength) {
@@ -49,6 +54,7 @@ $(document).ready(function() {
             }
             //If the letter P is pushed and the player2 postion is less than the length of the racetrack
             //the updatePlayer function gets called and the P2's position moves forward one cell in the table
+            
             if (keyID.keyCode === 80) {
 
                 if (p2Laps < trackLength) {
@@ -56,6 +62,7 @@ $(document).ready(function() {
                     p2Laps++;
                 }
                 //Else the win function is called
+                
                 else {
                     win("Player2");
                 }
@@ -69,6 +76,7 @@ $(document).ready(function() {
 
     //The updatePlayer function uses the .next, .addClass and .removeClass methods to update the players
     // position on the racetrack and highlight which cell position the player is currently sitting on
+    
     updatePlayer = function(player) {
 
         var activeCell = $("#" + player + " td.active");
@@ -80,10 +88,12 @@ $(document).ready(function() {
 
     //The win funtion takes in the parameter winner from the EventListener and uses an alert
     // dialog box to display the winning player
+    
     function win(winner) {
         alert(winner + " wins!");
         gameOver();
     }
+    
     //The gameOver function is used to reload the game after a player has a won. 
     //The reload() method does the same as the reload button in a browser.
     //By default, the reload() method reloads the page from the cache, but you can force it to //
@@ -94,4 +104,11 @@ $(document).ready(function() {
     }
 
 
+ function randomColour () {
+    return '#' + Math.random().toString(16).slice(2, 8);
+  }
+
+  $('keyID.keyCode === 81').on('keyup', function () {
+    $('player2_strip').css('background-color', randomColour());
+  });
 });
