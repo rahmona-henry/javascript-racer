@@ -3,7 +3,7 @@ $(document).ready(function() {
 var canvas = document.getElementById("canvas"),
 ctx = canvas.getContext("2d");
 
-canvas.width = canvas.height = 300;
+canvas.width = canvas.height = 100;
 
 var player1 = {
     x: 50,
