@@ -24,7 +24,7 @@ var x = 150,
     y = 150,
     velY = 0,
     velX = 0,
-    speed = 2,
+    speed = 10,
     friction = 0.98,
     keys = [];
 
