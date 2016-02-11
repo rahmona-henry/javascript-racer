@@ -1,115 +1,97 @@
 $(document).ready(function() {
 
-var canvas = document.getElementById("canvas"),
-ctx = canvas.getContext("2d");
+    //Create a variable Laps which accounts for the players moves on the racetrack
+    //Create a variable trackLength which takes the players input to create the lenght of the racetrack
 
-canvas.width = canvas.height = 100;
 
-var player1 = {
-    x: 50,
-    y: 150,
-    velY: 0,
-    velX: 0,
-    color: "blue"
-},
-player2 = {
-    x: 250,
-    y: 150,
-    velY: 0,
-    velX: 0,
-    color: "red"
-};
+    var p1Laps = 0;
+    var p2Laps = 0;
+    var trackLength = 0;
 
-var x = 150,
-    y = 150,
-    velY = 0,
-    velX = 0,
-    speed = 10,
-    friction = 0.98,
-    keys = [];
+    //Use the prompt method() to display a dialog box which asks the players for their preferred
+    //tracklength between 5-20 table cells
 
-function update() {
+    var startGame = function(trackLenght) {
+        trackLength = prompt("Players set your preferred track length between 5 -20 lenghts");
 
-    if (keys[38]) {
-        if (player1.velY > -speed) {
-            player1.velY--;
-        }
+        //Use the if statement to ensure the player input is between the specified track length
+        if (trackLength < 5 || trackLength > 20) {
+            var newtrackLength = alert("Please choose a track lenght between 5-20");
+            trackLength = newtrackLength;
+            gameOver();
+        };
+
+
+        //Use a for loop to create the racetrack length based on the players input
+        for (var i = 1; i <= trackLength; i++) {
+
+            //Used the JQuery .append method to insert the required number of table cells/track lenght
+            // at the end of the racetrack   
+            $("#player1_strip").append("<td>");
+            $("#player2_strip").append("<td>");
+        };
+
+        //Use A keyboard EventListener to listen for a 'keyup' event on keyboard letters Q & P
+        $(document).on('keyup', function(keyID) {
+
+            //If the letter Q is pushed and the player1 postion is less than the length of the racetrack
+            //the updatePlayer function gets called and the P1's position moves forward one cell in the table
+            if (keyID.keyCode === 81) {
+
+                if (p1Laps < trackLength) {
+                    updatePlayer('player1_strip');
+                    p1Laps++;
+                }
+                //Else the win function is called
+                else {
+                    win("Player1");
+                }
+            }
+            //If the letter P is pushed and the player2 postion is less than the length of the racetrack
+            //the updatePlayer function gets called and the P2's position moves forward one cell in the table
+            if (keyID.keyCode === 80) {
+
+                if (p2Laps < trackLength) {
+                    updatePlayer('player2_strip');
+                    p2Laps++;
+                }
+                //Else the win function is called
+                else {
+                    win("Player2");
+                }
+            }
+
+        });
+
+    }
+    startGame();
+
+
+    //The updatePlayer function uses the .next, .addClass and .removeClass methods to update the players
+    // position on the racetrack and highlight which cell position the player is currently sitting on
+    updatePlayer = function(player) {
+
+        var activeCell = $("#" + player + " td.active");
+        var moveCell = activeCell.next();
+
+        activeCell.removeClass("active");
+        moveCell.addClass("active");
+    };
+
+    //The win funtion takes in the parameter winner from the EventListener and uses an alert
+    // dialog box to display the winning player
+    function win(winner) {
+        alert(winner + " wins!");
+        gameOver();
+    }
+    //The gameOver function is used to reload the game after a player has a won. 
+    //The reload() method does the same as the reload button in a browser.
+    //By default, the reload() method reloads the page from the cache, but you can force it to //
+    //reload the page from the server by setting the forceGet parameter to true: location.reload(true)
+
+    function gameOver() {
+        window.location.reload(true);
     }
 
-    if (keys[40]) {
-        if (player1.velY < speed) {
-            player1.velY++;
-        }
-    }
-    if (keys[39]) {
-        if (player1.velX < speed) {
-            player1.velX++;
-        }
-    }
-    if (keys[37]) {
-        if (player1.velX > -speed) {
-            player1.velX--;
-        }
-    }
-
-    if (keys[87]) {
-        if (player2.velY > -speed) {
-            player2.velY--;
-        }
-    }
-
-    if (keys[83]) {
-        if (player2.velY < speed) {
-            player2.velY++;
-        }
-    }
-    if (keys[68]) {
-        if (player2.velX < speed) {
-            player2.velX++;
-        }
-    }
-    if (keys[65]) {
-        if (player2.velX > -speed) {
-            player2.velX--;
-        }
-    }
-    ctx.clearRect(0, 0, 300, 300);
-    updatePlayer(player1);
-    updatePlayer(player2);
-    setTimeout(update, 10);
-}
-
-function updatePlayer(player) {
-    player.velY *= friction;
-    player.y += player.velY;
-    player.velX *= friction;
-    player.x += player.velX;
-
-    if (player.x >= 295) {
-        player.x = 295;
-    } else if (player.x <= 5) {
-        player.x = 5;
-    }
-
-    if (player.y > 295) {
-        player.y = 295;
-    } else if (player.y <= 5) {
-        player.y = 5;
-    }
-
-    ctx.fillStyle = player.color;
-    ctx.beginPath();
-    ctx.arc(player.x, player.y, 5, 0, Math.PI * 2);
-    ctx.fill();
-}
-
-update();
-
-document.body.addEventListener("keydown", function (e) {
-    keys[e.keyCode] = true;
-});
-document.body.addEventListener("keyup", function (e) {
-    keys[e.keyCode] = false;
-})
 
 });
