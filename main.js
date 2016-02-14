@@ -31,6 +31,7 @@ $(document).ready(function () {
   var score2 = 0;
   var winScore = 3;
 
+  
   window.addEventListener('keydown', function (e) {
     keys[e.keyCode] = true;
   }, false);
