@@ -29,6 +29,7 @@ $(document).ready(function () {
 
   var score1 = 0;
   var score2 = 0;
+
   
   window.addEventListener('keydown', function (e) {
     keys[e.keyCode] = true;
@@ -88,10 +89,11 @@ $(document).ready(function () {
   }
 
   function process1 () {
+
+   
     score1++;
     finishLine.x = Math.random() * (width - 20);
     finishLine.y = Math.random() * (height - 100);
-
 
 
   }
@@ -115,8 +117,14 @@ $(document).ready(function () {
     player2.y + player2.height < finishLine.y);
   }
 
+
 setInterval (function (){
   game ();
 },1000/30)
+
+//function gameOver() {
+ //window.location.reload(true);
+ //}
+
 
 });
