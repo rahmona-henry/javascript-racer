@@ -2,6 +2,7 @@ $(document).ready(function () {
   var canvas = document.getElementById('canvas'),
     context = canvas.getContext('2d');
 
+
   var width = 1000, height = 500, speed = 5;
 
   var keys = [];
@@ -71,6 +72,9 @@ $(document).ready(function () {
   function render () {
     context.clearRect(0, 0, 1000, 500);
 
+
+    
+
     context.fillStyle = 'blue';
     context.fillRect(player1.x, player1.y, player1.width, player1.height);
 
@@ -79,6 +83,7 @@ $(document).ready(function () {
 
     context.fillStyle = 'black';
     context.fillRect(finishLine.x, finishLine.y, finishLine.width, finishLine.height); 
+
     context.fillStyle = 'blue';
     context.font = 'bold 30px helvetica' 
     context.fillText(score1, 30, 20); 
@@ -122,9 +127,9 @@ setInterval (function (){
   game ();
 },1000/30)
 
-//function gameOver() {
- //window.location.reload(true);
- //}
+function gameOver() {
+ window.location.reload(true);
+ }
 
 
 });
