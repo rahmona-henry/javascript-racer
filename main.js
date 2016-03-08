@@ -102,7 +102,7 @@ if(score1 < winScore-1){
  }
 else {
   win('Player1')
-  //gameOver(); 
+  gameOver(); 
 }
 
 }
@@ -116,7 +116,7 @@ else {
 
   else {
   win('Player2')
-  //gameOver(); 
+  gameOver(); 
 }
 
 }
@@ -141,7 +141,7 @@ function gameOver () {
 
 function win(winner) {
  alert(winner + 'Wins!');
- gameOver();
+ 
 }
 
 
