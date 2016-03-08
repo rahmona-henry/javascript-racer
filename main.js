@@ -105,7 +105,6 @@ else {
   //window.location.reload(true);
   //gameOver(); 
 }
-
 }
   function process2 () {
 
@@ -136,23 +135,16 @@ else {
     player2.y + player2.height < finishLine.y);
   }
 
-
-function win(winner) {
- alert(winner + 'Wins!');
- window.location.reload(true);
- 
+  function win (winner) {
+   alert(winner + 'Wins!');
+    window.location.reload(true);
 }
 
 //function gameOver () {
 // window.location.reload(true);
  //}
 
-
-
-
-setInterval (function () {
-  game ();
-} , 1000/30)
-
-
+setInterval(function () {
+  game();
+}, 1000 / 30)
 });
