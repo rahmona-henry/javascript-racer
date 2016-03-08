@@ -102,7 +102,6 @@ if(score1 < winScore-1){
  }
 else {
   win('Player1')
-   window.location.reload(true)
   //gameOver(); 
 }
 
@@ -117,7 +116,6 @@ else {
 
   else {
   win('Player2')
-   window.location.reload(true)
   //gameOver(); 
 }
 
@@ -136,13 +134,17 @@ else {
     player2.y + player2.height < finishLine.y);
   }
 
+function gameOver () {
+ window.location.reload(true);
+ }
+
+
 function win(winner) {
  alert(winner + 'Wins!');
+ gameOver();
 }
 
-//function gameOver () {
- //window.location.reload(true);
- //}
+
 setInterval (function () {
   game ();
 } , 1000/30)
