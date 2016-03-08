@@ -85,11 +85,11 @@ $(document).ready(function () {
 
     context.fillStyle = 'blue';
     context.font = 'bold 30px helvetica' 
-    context.fillText(score1, 30, 20); 
+    context.fillText(score1, 30, 40); 
 
     context.fillStyle = 'red';
     context.font = 'bold 30px helvetica'  
-    context.fillText(score2, 900, 20);  
+    context.fillText(score2, 900, 40);  
   }
 
   function process1 () {
