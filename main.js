@@ -41,6 +41,7 @@ $(document).ready(function () {
   }, false);
 
   function game () {
+
     update();
     render();
   };
@@ -93,20 +94,21 @@ $(document).ready(function () {
     context.fillText(score2, 900, 20);  
   }
 
-  function process1 () {
+ 
 
-   
+  function process1 () {
     score1++;
     finishLine.x = Math.random() * (width - 20);
     finishLine.y = Math.random() * (height - 100);
+ 
+}
 
-
-  }
   function process2 () {
     score2++;
     finishLine.x = Math.random() * (width - 20);
     finishLine.y = Math.random() * (height - 100);
   }
+
 
   function collision (player1, finishLine) {
     return !(player1.x > finishLine.x + finishLine.width ||
@@ -123,13 +125,20 @@ $(document).ready(function () {
   }
 
 
-setInterval (function (){
-  game ();
-},1000/30)
+
 
 function gameOver() {
  window.location.reload(true);
  }
+  
+
+
+
+setInterval (function (){
+  game ();
+},1000/30)
+
+
 
 
 });

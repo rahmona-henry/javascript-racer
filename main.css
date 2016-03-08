@@ -2,7 +2,14 @@ canvas {
   border: 5px solid #000;
 }
 
-h4 {
- float:right;
+.info {
+width: 200px;
+height: 100px;
+float:right;
+text-align:center;
+
+}
+h3 {
+  color:red;
 }
 
