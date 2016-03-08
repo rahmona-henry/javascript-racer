@@ -94,24 +94,32 @@ $(document).ready(function () {
 
   function process1 () {
 
-    if(score1 === winScore){
-       alert("Winner");
-    }
 
-    else {
+if(score1 < winScore-1){
     score1++;
     finishLine.x = Math.random() * (width - 20);
     finishLine.y = Math.random() * (height - 100);
  }
+else {
+  win('Player1')
+  gameOver(); 
+}
 
 }
   function process2 () {
+
+    if(score2 < winScore-1){
     score2++;
     finishLine.x = Math.random() * (width - 20);
     finishLine.y = Math.random() * (height - 100);
   }
 
+  else {
+  win('Player2')
+  gameOver(); 
+}
 
+}
   function collision (player1, finishLine) {
     return !(player1.x > finishLine.x + finishLine.width ||
     player1.x + player1.width < finishLine.x ||
@@ -126,21 +134,16 @@ $(document).ready(function () {
     player2.y + player2.height < finishLine.y);
   }
 
+function win(winner) {
+ alert(winner + 'Wins!');
+}
 
-
-
-function gameOver() {
+function gameOver () {
  window.location.reload(true);
  }
-  
-
-
-
-setInterval (function (){
+setInterval (function () {
   game ();
-},1000/30)
-
-
+} , 1000/30)
 
 
 });

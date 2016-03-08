@@ -3,13 +3,21 @@ canvas {
 }
 
 .info {
-width: 200px;
+width: 250px;
 height: 100px;
 float:right;
 text-align:center;
+font-family: Helvetica;
 
 }
 h3 {
   color:red;
 }
 
+.red {
+  color:red;
+}
+
+.blue {
+  color:blue;
+}
