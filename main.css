@@ -5,9 +5,11 @@ canvas {
 .info {
 width: 150px;
 height: 100px;
-float:right;
+float: right;
 text-align:center;
 font-family: Helvetica;
+margin:auto;
+padding: 20px;
 
 }
 h3 {
