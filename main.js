@@ -30,6 +30,7 @@ $(document).ready(function () {
 
   var score1 = 0;
   var score2 = 0;
+  var winScore = 3;
 
   
   window.addEventListener('keydown', function (e) {
@@ -73,9 +74,6 @@ $(document).ready(function () {
   function render () {
     context.clearRect(0, 0, 1000, 500);
 
-
-    
-
     context.fillStyle = 'blue';
     context.fillRect(player1.x, player1.y, player1.width, player1.height);
 
@@ -94,15 +92,19 @@ $(document).ready(function () {
     context.fillText(score2, 900, 20);  
   }
 
- 
-
   function process1 () {
+
+    if(score1 === winScore){
+       alert("Winner");
+    }
+
+    else {
     score1++;
     finishLine.x = Math.random() * (width - 20);
     finishLine.y = Math.random() * (height - 100);
- 
-}
+ }
 
+}
   function process2 () {
     score2++;
     finishLine.x = Math.random() * (width - 20);
