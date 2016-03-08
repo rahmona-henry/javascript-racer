@@ -2,6 +2,7 @@ $(document).ready(function () {
   var canvas = document.getElementById('canvas'),
     context = canvas.getContext('2d');
 
+
   var width = 1000, height = 500, speed = 5;
 
   var keys = [];
@@ -31,6 +32,7 @@ $(document).ready(function () {
   var score2 = 0;
   var winScore = 3;
 
+  
   window.addEventListener('keydown', function (e) {
     keys[e.keyCode] = true;
   }, false);
@@ -40,6 +42,7 @@ $(document).ready(function () {
   }, false);
 
   function game () {
+
     update();
     render();
   };
@@ -79,6 +82,7 @@ $(document).ready(function () {
 
     context.fillStyle = 'black';
     context.fillRect(finishLine.x, finishLine.y, finishLine.width, finishLine.height); 
+
     context.fillStyle = 'blue';
     context.font = 'bold 30px helvetica' 
     context.fillText(score1, 30, 20); 
@@ -90,16 +94,32 @@ $(document).ready(function () {
 
   function process1 () {
 
+
+if(score1 < winScore-1){
     score1++;
     finishLine.x = Math.random() * (width - 20);
     finishLine.y = Math.random() * (height - 100);
-  }
+ }
+else {
+  win('Player1')
+  gameOver(); 
+}
+
+}
   function process2 () {
+
+    if(score2 < winScore-1){
     score2++;
     finishLine.x = Math.random() * (width - 20);
     finishLine.y = Math.random() * (height - 100);
   }
 
+  else {
+  win('Player2')
+  gameOver(); 
+}
+
+}
   function collision (player1, finishLine) {
     return !(player1.x > finishLine.x + finishLine.width ||
     player1.x + player1.width < finishLine.x ||
@@ -114,11 +134,16 @@ $(document).ready(function () {
     player2.y + player2.height < finishLine.y);
   }
 
-setInterval (function (){
-  game ();
-},1000/30)
+function win(winner) {
+ alert(winner + 'Wins!');
+}
 
-  function gameOver() {
-    window.location.reload(true);
-  }
+function gameOver () {
+ window.location.reload(true);
+ }
+setInterval (function () {
+  game ();
+} , 1000/30)
+
+
 });
